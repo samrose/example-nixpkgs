@@ -17,9 +17,9 @@ in
 
   environment.noXlibs = true;
 
-  #environment.systemPackages = [
-  #  (holoport-hardware-test.override { inherit target; })
-  #];
+  environment.systemPackages = [
+    emacs
+  ];
 
   networking.hostName = lib.mkOverride 1100 "example";
 

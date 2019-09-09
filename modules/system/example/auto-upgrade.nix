@@ -3,12 +3,12 @@
 with lib;
 
 let
-  cfg = config.system.holoportos.autoUpgrade;
+  cfg = config.system.example.autoUpgrade;
 in
 
 {
   options = {
-    system.holoportos.autoUpgrade = {
+    system.example.autoUpgrade = {
       enable = mkEnableOption "HoloPortOS auto-upgrade";
 
       dates = mkOption {};
@@ -16,7 +16,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    systemd.services.holoportos-upgrade = {
+    systemd.services.example-upgrade = {
       serviceConfig.Type = "oneshot";
       unitConfig.X-StopOnRemoval = false;
       restartIfChanged = false;

@@ -3,7 +3,7 @@
 with lib;
 
 {
-  options.system.holoportos = {
+  options.system.example = {
     target = mkOption {
       default = "generic";
     };
