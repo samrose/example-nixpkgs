@@ -9,7 +9,7 @@ in
 mkShell {
   shellHook = ''
     nixos-shell() {
-      $(nix-build default.nix -A example-nixpkgs.qemu -I nixos-config=profiles/$1 --no-out-link)/bin/run-example-vm
+      $(nix-build default.nix -A example-nixpkgs.qemu -I nixos-config=profiles/$1 --no-out-link)/bin/run-nixos-vm
     }
   '';
 

@@ -18,7 +18,7 @@ in
   environment.noXlibs = true;
 
   environment.systemPackages = [
-    emacs
+    vim
   ];
 
   networking.hostName = lib.mkOverride 1100 "example";
@@ -51,7 +51,7 @@ in
   
   system.example.autoUpgrade = {
     enable = true;
-    dates = "*:0/10";
+    dates = "*:0/01";
   };
 
   system.stateVersion = "19.09";
