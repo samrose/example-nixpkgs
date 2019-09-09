@@ -14,7 +14,8 @@ stdenvNoCC.mkDerivation {
       sudo -E nixos-rebuild switch --fast -I nixos-config=/etc/nixos/configuration.nix
     }
     example-shell() {
-      $(nix-build default.nix -A example-nixpkgs.qemu --no-out-link)/bin/run-nixos-vm
+      $(nix-build default.nix -I nixos-config=profiles/$1 \
+        -A example-nixpkgs.qemu --no-out-link)/bin/run-nixos-vm
     }
   '';
 
