@@ -19,6 +19,9 @@ in
 
   environment.systemPackages = [
     vim
+    spark
+    pypi2nix
+    git
   ];
 
   networking.hostName = lib.mkOverride 1100 "example";
