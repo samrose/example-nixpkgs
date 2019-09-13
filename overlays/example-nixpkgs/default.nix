@@ -21,6 +21,8 @@ with lib;
 
   example = callPackage ./example {};
 
+  hive = callPackage ./hive {};
+
   example-nixpkgs = recurseIntoAttrs {
     profile = tryDefault <nixos-config> ../../profiles;
 

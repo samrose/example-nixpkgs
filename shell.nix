@@ -19,5 +19,5 @@ mkShell {
     "nixpkgs-overlays=${root}/overlays"
   ];
 
-  QEMU_OPTS = "-m 2048 -nographic";
+  QEMU_OPTS = "-m 3048 -nographic";
 }

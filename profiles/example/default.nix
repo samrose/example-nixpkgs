@@ -22,6 +22,7 @@ in
     spark
     pypi2nix
     git
+    hive
   ];
 
   networking.hostName = lib.mkOverride 1100 "example";
